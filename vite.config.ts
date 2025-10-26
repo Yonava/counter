@@ -7,8 +7,8 @@ export default defineConfig({
   build: {
     lib: {
       entry: path.resolve(__dirname, 'src/index.ts'),
-      name: 'YonaVACounter',
-      fileName: (format) => `yona-va-counter.${format}.js`,
+      name: 'YonasVueCounter',
+      fileName: (format) => `yonas-vue-counter.${format}.js`,
     },
     rollupOptions: {
       external: ['vue'],

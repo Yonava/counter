@@ -1,13 +1,25 @@
 {
   "name": "yonas-vue-counter",
-  "version": "0.0.0",
+  "main": "./dist/yonas-vue-counter.umd.js",
+  "module": "./dist/yonas-vue-counter.es.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "version": "1.0.0",
   "type": "module",
   "engines": {
     "node": "^20.19.0 || >=22.12.0"
   },
+  "exports": {
+    ".": {
+      "import": "./dist/yonas-vue-counter.es.js",
+      "require": "./dist/yonas-vue-counter.umd.js"
+    }
+  },
   "scripts": {
     "dev": "vite",
-    "build": "run-p type-check \"build-only {@}\" --",
+    "build": "vue-tsc --emitDeclarationOnly && vite build",
     "preview": "vite preview",
     "test": "vitest",
     "build-only": "vite build",
@@ -17,8 +29,8 @@
     "lint": "run-s lint:*",
     "format": "prettier --write src/"
   },
-  "dependencies": {
-    "vue": "^3.5.22"
+  "peerDependencies": {
+    "vue": "^3.0.0"
   },
   "devDependencies": {
     "@prettier/plugin-oxc": "^0.0.4",
