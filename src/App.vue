@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue';
-import YonaCounter from './YonaCounter.vue';
+import YonaCounter from './components/YonaCounter.vue';
 
 const total = ref(0)
 </script>
