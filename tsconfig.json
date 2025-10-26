@@ -1,7 +1,7 @@
 {
-  "outDir": "dist",
+  "outDir": "lib",
   "rootDir": "src",
-  "include": ["src"],
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.vue"],
   "compilerOptions": {
     "composite": true,
     "declaration": true,
