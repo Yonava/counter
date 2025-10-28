@@ -1,3 +1,9 @@
+<script lang="ts">
+export default {
+  name: 'YonasCounter'
+}
+</script>
+
 <script setup lang="ts">
 import { ref, watch } from 'vue';
 

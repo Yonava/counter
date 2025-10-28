@@ -1,10 +1,16 @@
 import type { App } from 'vue'
-import YonaCounter from './components/YonaCounter.vue'
+import YonasCounter from './components/YonasCounter.vue'
 
-export { YonaCounter }
+export { YonasCounter }
+
+declare module 'vue' {
+  export interface GlobalComponents {
+    YonasCounter: typeof YonasCounter
+  }
+}
 
 export default {
   install(app: App) {
-    app.component('YonaCounter', YonaCounter)
+    app.component('YonasCounter', YonasCounter)
   },
 }

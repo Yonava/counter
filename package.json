@@ -14,7 +14,8 @@
   "exports": {
     ".": {
       "import": "./dist/yonas-vue-counter.es.js",
-      "require": "./dist/yonas-vue-counter.umd.js"
+      "require": "./dist/yonas-vue-counter.umd.js",
+      "types": "./dist/src/index.d.ts"
     }
   },
   "scripts": {
@@ -22,6 +23,7 @@
     "build": "vue-tsc --emitDeclarationOnly && vite build",
     "preview": "vite preview",
     "test": "vitest",
+    "type-emit": "vue-tsc --emitDeclarationOnly",
     "build-only": "vite build",
     "type-check": "vue-tsc --build",
     "lint:oxlint": "oxlint . --fix -D correctness --ignore-path .gitignore",
